@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <h1>Fun proto</h1>
+</body>
+</html>
+<script>
+    function fun(){
+        let a = 10;
+        console.log(a);
+    }
+    function ret(){
+        let b = 3;
+        return b;
+    }
+
+    fun()
+    console.log("1:",ret())
+    console.log("2:",fun.__proto__)
+    console.log("3:",fun.__proto__.prototype == Object().prototype)
+    console.log("4:",fun.__proto__.prototype == Object.prototype) //why false
+    console.log("3:",fun.__proto__.__proto__ == Object.prototype) //why true
+
+</script>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ball {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 40%;
+  left: 40%;
+  background: red;
+  animation: myOrbit 6s linear;
+}
+
+@keyframes myOrbit {
+    0% {
+    transform: translateX(100px) translateY(0);
+  }
+  25% {
+    transform: translateX(75px) translateY(50px);
+  }
+  50% {
+    transform: translateX(0) translateY(100px);
+  }
+  75% {
+    transform: translateX(-75px) translateY(50px);
+  }
+  100% {
+    transform: translateX(-100px) translateY(0);
+  }}
+
+    </style>
+</head>
+<body>
+    <div class="oval-container">
+        <div class="ball"></div>
+      </div>
+      
+</body>
+</html>

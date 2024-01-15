@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controled Button sync</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+          // button compo
+    const Button = (props) =>{
+      // if you want component update speratly the write useState in component func.
+        return(
+            <>
+            <button onClick={props.update}>count : {props.count}</button>
+            </>
+        )
+    }
+
+      function App() {
+        //if you want component update together write use state in here (parent comonent)
+        // React.useState();
+        const [count,setCount] = React.useState(0);
+        function update(){
+          setCount(count+1)
+        }
+        return (
+          <div className="App"> 
+            {/* these are sibiling components , they work sepratly
+            we want these components sthare our state togeather */}
+            <Button update={update} count={count}/>
+            <Button update={update} count={count}/> 
+            <Button update={update} count={count}/>            
+          </div>
+        )
+      }
+
+
+
+      const rootElement = document.getElementById("root")
+      const reactRoot = ReactDOM.createRoot(rootElement)
+      reactRoot.render(<App />)
+    </script>
+  </body>
+</html>

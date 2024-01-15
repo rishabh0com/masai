@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback function inside setState</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script type="text/babel">
+      function App() {
+        const [amount, setAmount] = React.useState(0)
+
+        const handleDeposit = () => {
+          // setAmount((prevAmount) => prevAmount + 100)
+          // setAmount((prevAmount) => prevAmount + 100)
+          // setAmount((prevAmount) => prevAmount + 100)
+          // setAmount((prevAmount) => prevAmount + 100)
+          
+          setAmount(amount + 100);
+          //because after updating it will take time so amount can display oldervalue
+          console.log(`amount is ${amount}`); // Will log old amount value
+
+        }
+        console.log(`amount is ex ${amount}`); // is update when app is render real time
+
+        const handleWithdraw = () => {
+          setAmount(amount - 100)
+        }
+
+        return (
+          <div className="App">
+            <h1>Current : {amount}</h1>
+            <button onClick={handleDeposit}>Deposit 100</button>
+            <button onClick={handleWithdraw}>Withdraw 100</button>
+          </div>
+        )
+      }
+
+      const rootElement = document.getElementById("root")
+      const reactRoot = ReactDOM.createRoot(rootElement)
+      reactRoot.render(<App />)
+    </script>
+  </body>
+</html>

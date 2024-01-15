@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-2B</title>
+</head>
+<body>
+    <div class="cont">
+        <h1>Heading -  1</h1>
+        <h1>Heading - 2</h1>
+        
+    </div>
+
+    <p id="para"> I am a paragraph</p>
+    
+</body>
+
+<script>
+// combinators
+let headingDiv = document.querySelectorAll(".cont > h1") 
+console.log(headingDiv)
+// css property all you can use here
+let heading = document.querySelector(".cont > h1")
+
+// console.log(heading.innerText)
+
+// document.getElementById -- id ------------> one element
+// document.getElementsByTagName ---> tag ----> multiple (array) or single array has only one element
+// document.getElementsByClassName ---> class --> multiple
+// documnet.querySelectorAll ---> combinator ---> multiple
+// document.querySelector --- > id,tag, class #, . ---> single
+
+let paragraph = document.querySelector("#para")
+console.log(paragraph.innerText)
+
+</script>
+</html>

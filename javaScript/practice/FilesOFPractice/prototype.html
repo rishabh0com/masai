@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title></div></title>
+</head>
+<body>
+    <h1>.prototype </h1>
+</body>
+</html>
+
+<script>
+    //Person.prototype.increaseAge = function () {
+    //    this.age = this.age + 1
+    //    console.log(this.age)
+    //  }
+    //  
+    //  Person.prototype.sleep = function () {
+    //    console.log(`${this.firstName} is sleeping.`)
+    //  }
+    //  
+    //  Person.prototype.eat = function () {
+    //    console.log(`${this.firstName} is eating.`)
+    //  }
+    //  
+    //  Person.prototype.introduceSelf = function () {
+    //    console.log(this.firstName, this.lastName, this.age)
+    //  }
+    //  
+    //  function Person(firstName, lastName, age) {
+    //    let obj = {}
+    //    Object.setPrototypeOf(obj, Person.prototype)
+    //  
+    //    obj.firstName = firstName
+    //    obj.lastName = lastName
+    //    obj.age = age
+    //  
+    //    return obj
+    //  }
+    //  
+    //  let person1 = Person("Bruce", "Wayne", 26)
+    //  console.log(person1)
+
+    // Student.prototype from constructor function
+
+    function Student(fname,lname,age,std){
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.std = std;
+    }
+    //set prototype under the Student function
+
+    Student.prototype.study = function(){
+        console.log(`${this.fname} ${this.lname} study 4 hours in a day`);
+    }
+
+    Student.prototype.old = function(){
+        console.log(`${this.fname} is a ${this.age} year old`);
+    }
+
+    Student.prototype.standrad = function(){
+        console.log(`${this.fname} study in ${this.std} standrand`);
+    }
+//create new object with help of constructor function
+
+    student1 = new Student("Rishabh","Tripathi","20","12th");
+//calling
+    student1.study()
+    student1.old()
+    student1.standrad()
+    console.log(Student.prototype)
+    console.log(student1)
+
+    //new constructor function
+    function Employee(fname,lname,age,depatment,salary){
+        Student.call(this,fname,lname,age);
+
+        this.depatment = depatment;
+        this.salary = salary;
+    }
+    
+    let Employee1 = Employee()
+</script>

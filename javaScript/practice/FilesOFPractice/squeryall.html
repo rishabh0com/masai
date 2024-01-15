@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Your CSS styles */
+    .your-selector {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="your-selector">Element 1</div>
+  <div class="your-selector">Element 2</div>
+  <div class="your-selector">Element 3</div>
+
+  <script>
+    const elements = document.querySelectorAll('.your-selector');
+
+    elements.forEach((element, index) => {
+      element.addEventListener('click', () => {
+        console.log(`Clicked element index: ${index}`);
+      });
+    });
+  </script>
+</body>
+</html>

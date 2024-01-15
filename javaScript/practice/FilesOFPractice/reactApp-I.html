@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .card{
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid brown;
+     }
+    </style>
+</head>
+<body>
+    <div id="root"></div> 
+    
+</body>
+</html>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+<script type="text/babel">
+    const rootElement = document.getElementById("root")
+const root = ReactDOM.createRoot(rootElement)
+
+const Card = ({name,shopName,address})=>{
+  return (
+   <div className="card">
+    <p> Name : {name} </p>
+    <p> ShopName : {shopName} </p>
+    <p> Address : {address.join(" , ")} </p>
+   </div>
+)
+}
+
+const App = () =>{
+return (
+<div className = "visitCard"> 
+  <Card 
+  name = "Dhanush"
+  shopName = "Dhanush AutoMobiles"
+  address = {["topi gali 54 ","RawatPur ","Kanpur "]}
+  />
+</div>
+)
+}
+
+root.render(<App/>)
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setPrototypeOf</title>
+</head>
+<body>
+<h1>obj proto</h1>
+</body>
+</html>
+<script>
+
+    //let obj = {
+    //    age : 18
+    //}
+    //console.log(Object().prototype == obj.prototype)
+    //console.log(Object.prototype == obj.__proto__)
+    //console.log(Object(),obj)
+
+    //Array
+
+    let objj = {
+        hii : "bye"
+    }
+    let arr = [1,2,3];
+    console.log("~",arr);
+    console.log("0",arr.__proto__)
+    console.log("1",arr.__proto__  ==  Array.prototype)
+    console.log("2",Array.prototype.__proto__)
+    console.log("3",Array.__proto__ == Object.__proto__)
+    console.log("4",Array().prototype == Object().prototype)
+    console.log("4A",Array.prototype == Object.prototype)
+    console.log("5",Array.prototype,Object.__proto__)
+    console.log("6",Object().__proto__.__proto__ == null)
+    //console.log("7",Object().prototype.__proto__ == null) error
+    console.log("8",Object().__proto__.prototype == null)
+    console.log("9",Object.prototype.__proto__ == null)
+    console.log("10",objj.__proto__ == Object.prototype)
+    console.log("11",objj.__proto__.prototype == Object.prototype.__proto__)
+    console.log("12",objj.__proto__.prototype == null)
+    
+    
+
+</script>

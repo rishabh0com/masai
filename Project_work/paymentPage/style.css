@@ -1,0 +1,43 @@
+#parent{
+    border: 2px solid red;
+    width: 40%;
+    height: 600px;
+    margin: auto;
+}
+#payment{
+    border: 1px solid seagreen;
+    height: 10%;
+    width: 100%;
+}
+#Qbox{
+    border: 1px solid indigo;
+    height: 65%;
+    width: 100%;
+}
+#aap{
+    border: 1px solid lawngreen;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    
+}
+#text{
+    border: 1px solid violet;
+    height: 15%;
+    max-width: 100%; 
+}
+#aap>div{
+    border: 1px solid darkblue;
+    height: 50px;
+    max-width: 15%;
+   
+}
+#aap>div>img{
+    border: 1px solid red;
+    max-width:100%;
+   
+    
+    
+}

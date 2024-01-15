@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cources</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #parent{
+            border: 0px solid rebeccapurple;
+            width: 50%;
+            margin: auto;
+            height: 480px;
+            display: flex;
+        }
+
+        .child{
+            border: 0px solid red;
+            width: 40%;
+            margin: auto;
+            height: 100%;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border-radius: 15px;
+        }
+        .img{
+            width: 100%;
+        }
+        h1{
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+        }
+        h3>span{
+            color: red;
+        }
+        li{
+            font-weight: bold;
+        }
+        button{
+            display: block;
+            margin: auto;
+            background-color: red;
+            width: 90%;
+            height: 40px;
+            border-radius: 8px;
+            border:0px;
+            font-weight: bold;
+            color: aliceblue;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>Our Cources</h1>
+    <h3>Practice-Based Learnig Tracks,<span>Supercharged A.I.</span></h3>
+
+    <div id="parent">
+        <div class="child">
+            <img class="img" src="https://www.masaischool.com/img/new-homepage/software-course-card.svg" alt="">
+            <h4> Software Development</h4>
+            <p>Become job-ready in 30-35 weeks.</p>
+            <hr>
+            <ul>
+                <li>Opportunities : Dull Stack Developer , Backend
+                    Developer,Software Engineer & much more.
+                </li>
+                <li>100% live with expert instructors.</li>
+                <li>Pay After Placement</li>
+            </ul>
+            <button> VIEW DETAIL</button>
+
+        </div>
+        <div class="child">
+            <img class="img" src="https://www.masaischool.com/img/new-homepage/data-analytics-card.svg" alt="">
+            <h4>Data Analaytics</h4>
+            <p>Become a job-ready in 30 weeks.</p>
+            <hr>
+            <ul>
+                <li>Opportunities : Dull Stack Developer , Backend
+                    Developer,Software Engineer & much more.</li>
+                <li>Learn form expert instructor and hands-on assignments</li>
+                <li>Pay Ater Placement</li>
+            </ul>
+            <button>VIEW DETAIL</button>
+
+        </div>
+    </div>
+
+</body>
+</html>

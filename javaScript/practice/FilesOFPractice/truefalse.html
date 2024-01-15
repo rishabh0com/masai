@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    let isTrue = true;
+
+    function toggleState() {
+      const resultElement = document.getElementById('result');
+      isTrue = !isTrue;
+      resultElement.innerText = `Current state: ${isTrue}`;
+    }
+  </script>
+</head>
+<body>
+  <button onclick="toggleState()">Toggle State</button>
+  <div id="result">Current state: true</div>
+</body>
+</html>

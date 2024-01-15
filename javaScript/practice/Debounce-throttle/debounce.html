@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>debouncee</title>
+</head>
+<body>
+    <div id="inputBox">
+        <input type="text" id="input" placeholder="Enter A text..">
+    </div>
+    <h1 id="disText"></h1>
+</body>
+</html>
+
+<!-- this method with help of clouser Function -->
+<!-- <script>
+    let inputB = document.querySelector("#input");
+    let disText = document.querySelector("#disText");
+
+    function operation(query){
+        disText.innerHTML = query;
+    }
+
+    function debounce(operation){
+         let timer
+         return function (query)
+         {
+            clearTimeout(timer)
+         timer = setTimeout(()=>{
+            operation(query)
+         },2000)
+
+         }
+    }
+
+    const deSerch = debounce(operation)
+
+    inputB.addEventListener("input",()=>{
+         deSerch(inputB.value)        
+    })
+</script> -->
+
+<!-- this method without help of clouser function  -->
+  <script>
+    let inputB = document.querySelector("#input");
+    let disText = document.querySelector("#disText");
+
+    function operation(query){
+        disText.innerHTML = query;
+    }
+
+
+    let timer = null;
+    inputB.addEventListener("input",()=>{
+        clearTimeout(timer)
+        timer = setTimeout(()=>{
+            operation(inputB.value)
+        },3000)
+    })
+  </script>

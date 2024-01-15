@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat</title>
+</head>
+<body>
+    <h1>objCreate</h1>
+</body>
+</html>
+
+<script>
+
+    let obj = {
+        name: "vivek",
+        sayHello: function () {
+          console.log("Hello")
+        },
+      }
+      
+      let obj2 = Object.create(obj) // The Object.create() method creates a new object, using an existing object as the prototype of the newly created object.
+      
+      obj2.salary = 100000 // adding as main property
+      obj2.work = function () {
+        // adding as main method
+        console.log("Working")
+      }
+      console.log(obj2)
+
+      f1 = {
+        hii : "hii"
+      }
+      let f2 = Object.create(f1);
+      console.log(f2.hii)
+
+
+</script>

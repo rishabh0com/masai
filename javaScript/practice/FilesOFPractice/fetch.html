@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch</title>
+</head>
+<body>
+    
+    <div id="root">
+
+    </div>
+
+</body>
+</html>
+<script>
+    fetch(`https://reqres.in/api/users?page=2`)
+    .then(res => res.json())
+    .then(res =>{
+        console.log(res);
+        displayData(res.data)
+    })
+
+    .catch(error => {
+        console.log("An error",error)
+    })
+
+    // display data function
+    let displayData = (data)=>{
+        let root = document.getElementById("root");
+
+        data.forEach(ele =>{
+            let card = document.createElement("div")
+            let img = document.createElement("img");
+            img.src = ele.avatar;
+            let email = document.createElement("p")
+
+            card.append(img)
+            root.append(card)
+
+
+        })
+
+    }
+
+</script>

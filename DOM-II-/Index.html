@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-2A</title>
+</head>
+ <!-- class,tag,combinator -->
+
+ <!-- class, tag, combinator and id -->
+<body>
+    <h1 class = "head" >Heading-1</h1>
+    <h1 class = "head" >Heading-2</h1>
+    <h1 class = "head">Heading-3</h1>
+    <h1 class = "head">Heading-4</h1>
+    <h1 class = "head">Heading-5</h1>
+
+</body>
+
+<script>
+   //tags
+//   document.getElementById ---> one element
+   let heading = document.getElementsByTagName("h1") // array
+//    console.log(heading[1].innerText)
+
+//class
+let classHeading = document.getElementsByClassName("head") // array
+console.log(classHeading[0].innerText)
+
+
+for(let i = 0; i<heading.length; i++)
+{
+    // console.log(heading[i].innerText)
+}
+
+
+</script>
+</html>

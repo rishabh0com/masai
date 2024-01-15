@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First time React</title>
+</head>
+<body>
+    <div id="root">
+        
+    </div>
+    
+
+
+
+</body>
+</html>
+
+<!-- React packages -->
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    
+// vanila javaScript code :-
+// let root = document.getElementById("root");
+// let element = document.createElement("div");
+// element.className = "first element";
+// element.innerHTML = `<h1> Radhe radhe </h1>`;
+// root.append(element);
+
+// React code :-
+//catch the DOM element 
+// then pass to REactDOM
+let root = document.getElementById("root");
+let reactRoot = ReactDOM.createRoot(root); //1 taika
+// reactRoot = ReactDOM.createRoot(document.getElementById("root")); //2 tarika
+
+let content = <h2> Meri Radha Rani </h2> //tarika 1
+
+// creat react element 
+//let element = React.createElement("div",{className:'second'},content) //tarika 2
+
+// display react element on DOM
+reactRoot.render(content)
+
+</script>

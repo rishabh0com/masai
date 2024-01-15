@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures & Stale Closures</title>
+  </head>
+  <body>
+    <script>
+      /* Closures */
+      function outerFunction() {
+        let outerVariable = "I'm outside!"
+
+        function innerFunction() {
+          console.log(outerVariable) // innerFunction can access outerVariable
+        }
+
+        return innerFunction
+      }
+
+      const myClosure = outerFunction()
+      myClosure() // Outputs: "I'm outside!"
+
+      /* Stale Closure */
+      function counter(initValue) {
+        let count = initValue
+        function increment() {
+          count += 1
+          console.log(count)
+        }
+
+        let message = `Count is ${count}`
+        function getCount() {
+          return message
+        }
+
+        return [increment, getCount]
+      }
+      const [increment, getCount] = counter(0)
+      increment() // 1
+      increment() // 2
+      increment() // 3
+      // Does not work!
+      console.log(getCount()) // Current value is 0
+      console.log(getCount())
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom- 2C</title>
+</head>
+<body>
+    <!-- <button id="btn"> Button </button> -->
+    <!-- onclick is an attribute html -->
+    <h1 id="display"></h1>
+<div class="cont">
+    
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+    <button>6</button>
+    <button>7</button>
+    <button>8</button>
+    <button>9</button>
+    <button>0</button>
+</div>
+    
+</body>
+
+<script>
+    let keypad = document.querySelectorAll(".cont > button") // array
+    let heading = document.getElementById("display")
+
+    for(let i = 0; i<keypad.length; i++)
+    {
+        keypad[i].addEventListener("click",function(e)
+        {
+            // console.log(e.target)  button is the target element where event is happening
+            //   heading.innerText = i; wrong way
+            // heading.innerText = keypad[i].innerText // one way to do
+            heading.innerText = e.target.innerText // 2nd way to do
+        })
+    }
+
+</script>
+</html>
