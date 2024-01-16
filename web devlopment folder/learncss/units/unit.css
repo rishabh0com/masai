@@ -1,0 +1,20 @@
+main{
+    border: 5px dotted brown;
+    /* width: 50%; */
+    width: 50vw;
+}
+h1{
+    /* font-size: 50px; */
+    color: rgb(35, 110, 176);
+}
+
+header{
+    font-size: 4em;
+}
+
+section{
+    border: 5px dashed green;
+    /* width: 50%; */
+    width: 100vw;
+    height: 50vw;
+}

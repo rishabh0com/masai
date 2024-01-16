@@ -1,0 +1,27 @@
+*{
+    font-family: system-ui;
+}
+
+body {
+background-color: rgb(205, 129, 28);
+}
+
+h1 {
+    color: brown;
+}
+
+#sec1>h2{
+    color: green;
+}
+
+.s1,.e1 {
+    background-color: aqua;
+}
+
+#sec3 {
+    background-color: bisque;
+}
+
+span{
+    background-color: rgb(193, 50, 50);
+}

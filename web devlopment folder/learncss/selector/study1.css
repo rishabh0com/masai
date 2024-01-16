@@ -1,0 +1,30 @@
+h1{
+    color:red;
+    font-family: monospace;
+    background-color: yellow;
+
+}
+/* grouping selector */
+.is,.moon{ 
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium';
+    background-color: aquamarine;
+
+}
+/* nested delector */
+#frist>p{
+    color:green;
+}
+#second>h2{
+    font-family:fantasy;
+}
+p{
+    color:blue;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+body{
+   background-color: rgb(215, 216, 215);
+}
+button{
+    background-color:goldenrod;
+}
